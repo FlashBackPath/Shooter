@@ -62,12 +62,9 @@ for i in range(1, 6):
 ship = Player("rocket.png", 8, 10, 400)
 
 while True:
-    # переменная "игра закончилась": как только там True, в основном цикле перестают работать спрайты
     finish = False
-    # Основной цикл игры:
-    run = True  # флаг сбрасывается кнопкой закрытия окна
+    run = True
     while run:
-        # событие нажатия на кнопку “Закрыть”
         for e in event.get():
             if e.type == QUIT:
                 run = False
@@ -105,4 +102,3 @@ while True:
                 finish = True
             display.update()
         time.delay(50)
-
